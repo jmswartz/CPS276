@@ -4,7 +4,6 @@ $addName = new AddNamesProc();
 $output = $addName->addClearNames();
 
 
-
 //$addname ->setname();
 
 ?>
@@ -19,8 +18,8 @@ $output = $addName->addClearNames();
 
 <h2>Add Names</h2>
 
-<input class="btn btn-primary" type="submit" id="Add Names" value="Add Name">
-<input class="btn btn-primary" type="submit" id="Clear Names" value="Clear Names">
+<input class="btn btn-primary" type="submit" name="add" value="Add Name">
+<input class="btn btn-primary" type="submit" name="clear" value="Clear Names">
 <br>
 Enter Names
 <br>
@@ -28,7 +27,7 @@ Enter Names
 <br>
 List of Names
 <textarea style="height: 500px;" class="form-control"
-id="firstname" name="namelist"><?php echo $output; ?></textarea>
+id="namelist" name="namelist"><?php echo $output; ?></textarea>
 
 </textarea>
 </form>
