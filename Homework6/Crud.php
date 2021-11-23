@@ -36,16 +36,7 @@ class Crud extends PdoMethods{
        /* HERE I CREATE THE SQL STATEMENT and I AM BINDING THE PARAMETERS */
        $sql = "INSERT INTO files (file_name, file_path, entered_file_name) VALUES (:fname, :fpath, :enteredname)";
   
-   /* THESE BINDINGS ARE LATER INJECTED INTO THE SQL STATEMENT THIS PREVENTS AGAIN SQL INJECTIONS */
-   $bindings = [
-           [':fname',$_FILES["selectedFile"]["name"],'str'],
-           [':fpath',"files/".$_FILES["selectedFile"]["name"],'str'],
-           [':enteredname',$_POST['enteredFileName'],'str']
-       ];
-
-       /* I AM CALLING THE OTHERBINDED METHOD FROM MY PDO CLASS */
-       $result = $pdo->otherBinded($sql, $bindings);
-
+   
        /* HERE I AM USING AN OBJECT TO RETURN WHETHER SUCCESSFUL FOR ERROR */
        if($result === 'error'){
            return 'There was an error adding the name';

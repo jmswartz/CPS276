@@ -5,7 +5,7 @@ $results = execute ('DELETE FROM names');
 
 
   $response['msg']="Data Cleared";
-  $response['masterstaus']="success";
+  $response['masterstatus']="success";
 
 
 
